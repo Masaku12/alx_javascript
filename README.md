@@ -59,6 +59,7 @@ This project is designed to help you learn and practice various JavaScript conce
 
    ```bash
    git clone https://github.com/Masaku12/alx_javascript.git
+   ```
 
 Navigate to the assignment folder you want to work on:
 
