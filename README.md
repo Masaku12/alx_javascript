@@ -57,13 +57,12 @@ This project is designed to help you learn and practice various JavaScript conce
 
 1. Clone this repository to your local machine:
 
-   ```bash
-   git clone https://github.com/Masaku12/alx_javascript.git
+   ```git clone https://github.com/Masaku12/alx_javascript.git
    ```
 
 Navigate to the assignment folder you want to work on:
 
-```cd javascript-learning-project/assignment-X
+```cd alx_javascript/assignment-X
 ```
 
 Follow the specific instructions provided in each assignment's README to complete the exercises and practice the concepts covered. Document your observations, discoveries, and code comments as you work through each assignment to reinforce your understanding.
