@@ -8,3 +8,5 @@ class Rectangle {
         // Constructor code goes here
     }
 }
+
+module.exports = Rectangle;
