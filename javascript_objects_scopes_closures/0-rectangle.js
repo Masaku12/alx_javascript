@@ -1,3 +1,5 @@
+#!/usr/bin/node
+
 /** 
  * This empty class represents a rectangle
  * @class
