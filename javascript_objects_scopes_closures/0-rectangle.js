@@ -3,7 +3,7 @@
  * @class
  */
 
-class Rectangle{
+class Rectangle {
     constructor() {
         // Constructor code goes here
     }
