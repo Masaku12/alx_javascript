@@ -3,7 +3,7 @@
  * @class
  */
 
-class Rectangele {
+class Rectangle {
     constructor(w, h) {
         this.width = w;
         this.height = h;
