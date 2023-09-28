@@ -3,6 +3,8 @@
  * @class
  */
 
-class Rectangle {
-    // This is an empty class 
+class Rectangle{
+    constructor() {
+        // Constructor code goes here
+    }
 }
