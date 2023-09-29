@@ -43,6 +43,7 @@ guillaume@ubuntu:~/$
 - GitHub repository: `alx_javascript`
 - Directory: `javascript-network`
 - File: `0-statuscode.js`
+____________________________________________________________________________________________________________________________________
 
 ## 1. Star wars movie title
 
@@ -67,6 +68,7 @@ guillaume@ubuntu:~/$
 - GitHub repository: `alx_javascript`
 - Directory: `javascript-network`
 - File: `1-starwars_title.js`
+_____________________________________________________________________________________________________________________________________
 
 ## 2. Star wars Wedge Antilles
 
@@ -87,6 +89,7 @@ guillaume@ubuntu:~/$
 - GitHub repository: `alx_javascript`
 - Directory: `javascript-network`
 - File: `2-starwars_count.js`
+___________________________________________________________________________________________________________________________________
 
 ## 3. Loripsum
 
@@ -116,6 +119,7 @@ guillaume@ubuntu:~/$
 - GitHub repository: `alx_javascript`
 - Directory: `javascript-network`
 - File: `3-request_store.js`
+__________________________________________________________________________________________________________________________________________
 
 ## 4. How many completed?
 
@@ -145,6 +149,7 @@ guillaume@ubuntu:~/$
 - GitHub repository: `alx_javascript`
 - Directory: `javascript-network`
 - File: `4-completed_tasks.js`
+___________________________________________________________________________________________________________________________________________
 
 ## 5. Who was playing in this movie?
 
