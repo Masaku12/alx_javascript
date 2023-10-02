@@ -1,5 +1,5 @@
 #!/usr/bin/node
-// A script that display the status code of a GET request
+// A script that displays the status code of a GET request
 
 // Getting the URL from the CLI
 const url = process.argv[2];
