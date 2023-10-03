@@ -1,13 +1,7 @@
 #!/usr/bin/node
 
-const request = require("request");
-const fs = require("fs");
-
-// Checks if URL & file path args are present
-if (process.argv.length !== 4) {
-    console.log("Usage: node 3-request-store.js <URL> <file path>");
-    process.exit(1);
-}
+const request = require('request');
+const fs = require('fs');
 
 // Retrieves URL and file path from the CL args
 const url = process.argv[2];
