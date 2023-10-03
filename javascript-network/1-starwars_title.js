@@ -27,7 +27,7 @@ request.get(apiUrl, (error, response, body) => {
             const movieData = JSON.parse(body);
 
             // Prints the movie title
-            console.log(`Title: ${movieData.title}`);
+            console.log(`${movieData.title}`);
         } catch (parseError) {
             console.error("Error parsing JSON response:", parseError);
         }
