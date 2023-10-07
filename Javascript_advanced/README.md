@@ -110,4 +110,4 @@ fred();
 
 Should display three alerts like below:
 
-![Example Image](image.png)
+![Example Image](images/image.png)
