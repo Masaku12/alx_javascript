@@ -110,5 +110,6 @@ fred();
 
 Should display three alerts like below:
 
-![Alt text](image.png)
+
+file:///home/masaku/Pictures/Screenshots/newtab.png
 
