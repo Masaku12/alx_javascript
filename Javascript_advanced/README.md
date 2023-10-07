@@ -111,3 +111,11 @@ fred();
 Should display three alerts like below:
 
 ![Example Image](images/image.png)
+![Example Image](images/newtab_1.png)
+![Example Image](images/newtab_2.png)
+
+**Repo:**
+
+- GitHub repository: `alx_javascript`
+- Directory: `Javascript_advanced`
+- File: `2-function_me.js`
