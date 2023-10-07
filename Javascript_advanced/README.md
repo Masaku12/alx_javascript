@@ -296,6 +296,8 @@ Draco: -2
 - Directory: `Javascript_advanced`
 - File: `6-hogwarts.js`
 
+_______________________________________________________________________________________________________________________________________________________
+
 ## 7. Stack order and setTimeout
 
 Write the following commands in the following order:
