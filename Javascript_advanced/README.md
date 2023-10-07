@@ -22,3 +22,93 @@
 - All your files should end with a new line
 - A `README.md` file, at the root of the folder of the project, is mandatory
 - Your code should use the `js` extension
+
+# Tasks
+
+## 0. Lexical scoping and welcome message
+
+Create a function named `welcome`:
+
+- It takes two arguments: `firstName` (string) and `lastName` (string)
+- It contains a variable named `fullName`, that will contains the `firstName` followed by a space and then the `lastName`
+- Within the `welcome` function, write a function named `displayFullName`:
+  - It should display an alert with the message `Welcome` followed by a space, then the variable `fullName` followed by an exclamation mark.
+- Call the function `displayFullName` at the end of the function `welcome`
+
+**How to test**
+
+- Open your web inspector in the tab “Console”
+- Copy paste your code in the console and hit enter
+- Copy and paste this `welcome('Holberton', 'School');` and hhit enter to run that code. It should prompt an alert with this content: `Welcome Holberton School!`
+- When you write and execute `alert(fullName)` afterwards, it should return a reference error `fullName is not defined`
+
+**Repo:**
+
+- GitHub repository: `alx_javascript`
+- Directory: `Javascript_advanced`
+- File: `0-welcome.js`
+
+_________________________________________________________________________________________________________________________________________
+
+## 1. Closure Scope Chain
+
+- Create a variable named `globalVariable` with value `Welcome`
+- Create a function `outer` that:
+   - alerts the content of the variable `globalVariable`
+   - creates a variable named `course` with value `Holberton`
+   - creates a function `inner` that:
+     - alerts the content of the variable `globalVariable` and `course` (concatenated)
+     - creates a variable named `exclamation` with value !
+     - creates a function `inception` that alerts the content of the variable `globalVariable`, `course`, and `exclamation` (concatenated)
+     - calls the function `inception`
+   - calls the function `inner`
+- Call the function `outer`
+
+Compose the code:
+
+ - Write the function `inception` within `inner`
+ - Write the function `inner` within `outer`
+ - Call the function `outer` in the main code (outside any function)
+ - Call the function `inner` within `outer`
+ - Call the function `inception` within `inner`
+
+**Requirements:**
+
+- Running the script should display three popups one by one with the text `Welcome`, `Welcome Holberton`, and `Welcome Holberton!`
+
+**Repo:**
+
+- GitHub repository: `alx_javascript`
+- Directory: `Javascript_advanced`
+- File: `1-nested_functions.js`
+
+_______________________________________________________________________________________________________________________________________
+
+## 2. Closure
+
+Write a function named `welcomeMessage`:
+
+- It accepts one argument `fullName` (string)
+- It should be a closure for an alert displaying `Welcome <fullName>`
+
+After this function definition, create three variables:
+
+- `guillaume` contains a call `welcomeMessage` with `Guillaume` as argument
+- `alex` contains a call `welcomeMessage` with `Alex` as argument
+- `fred` contains a call `welcomeMessage` with `Fred` as argument
+
+How to test:
+
+- In your web console, cop/paste your file
+- Executing the following in the console:
+
+```
+guillaume();
+alex();
+fred();
+```
+
+Should display three alerts like below:
+
+[img](https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2020/3/783cce39c2d154fdd206.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20231007%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20231007T184626Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=9b6e056586c13c819772a610fecac7872105ba386d4109d8497935cada583a3b)
+
