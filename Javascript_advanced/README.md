@@ -110,6 +110,4 @@ fred();
 
 Should display three alerts like below:
 
-
-file:///home/masaku/Pictures/Screenshots/newtab.png
-
+![Example Image](Javascript_advanced/image.png)
