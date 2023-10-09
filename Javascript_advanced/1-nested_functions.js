@@ -19,7 +19,7 @@ function outer() {
 
         // Defines the inceptions function
         function inception() {
-            // Alerts the contents of globalVariable, course, and exclamation
+            // Alerts the contents of globalVariable, course, and exclamation mark
             alert(globalVariable + " " + course + exclamation);
         }
 
