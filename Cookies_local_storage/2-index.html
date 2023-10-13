@@ -33,6 +33,24 @@
             document.cookie = `${existingCookies}email=${emailInput}; expires=${expirationDate.toUTCString()}`;
         }
 
+        // A function that gets the cookie value by name
+        function getCookie(cookieName) {
+            const name = cookieName + "=";
+            const decodedCookie = decodeURIComponent(document.cookie);
+            const cookiesArray = decodedCookie.split(';');
+
+            for (let i = 0; i <cookiesArray.length; i++) {
+                let cookie = cookiesArray[i];
+                while (cookie.charAt(0) === ' ') {
+                    cookie = cookie.substring(1);
+                }
+                if (cookie.indexOf(name) === 0) {
+                    return cookie.substring(name.length, cookie.length);
+                }
+            }
+            return "";
+        }
+
         // A function that shows cookies
         function showCookies() {
             // Creates a paragraph element
@@ -63,24 +81,6 @@
 
             // Appends the paragraph to the bottom of the page
             document.body.appendChild(paragraph);
-        }
-
-        // A function that gets the cookie value by name
-        function getCookie(cookieName) {
-            const name = cookieName + "=";
-            const decodedCookie = decodeURIComponent(document.cookie);
-            const cookiesArray = decodedCookie.split(';');
-
-            for (let i = 0; i <cookiesArray.length; i++) {
-                let cookie = cookiesArray[i];
-                while (cookie.charAt(0) === ' ') {
-                    cookie = cookie.substring(1);
-                }
-                if (cookie.indexOf(name) === 0) {
-                    return cookie.substring(name.length, cookie.length);
-                }
-            }
-            return "";
         }
     </script>
 </body>
