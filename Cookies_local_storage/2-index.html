@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+</head>
+<body>
+    <h1>Login to the website</h1>
+    <!--First name input-->
+    <input type="text" id="firstname" placeholder="Firstname">
+    <!--Email input-->
+    <input type="text" id="email" placeholder="Email">
+    <!--Log in Button-->
+    <button onclick="setCookies()">Log me in</button>
+    <h1>Cookies</h1>
+    <!--Show the Cookies Button-->
+    <button onclick="showCookies()">Show the cookies</button>
+
+    <!--Includes the JavaScript file-->
+    <script>
+        // A function that sets cookies
+        function setCookies() {
+            const firstNameInput = document.getElementById("firstname").value;
+            const emailInput = document.getElementById("email").value;
+            
+            // Calculates the expiration date (10 days from now)
+            const expirationDate = new Date();
+            expirationDate.setDate(expirationDate.getDate() + 10);
+            
+            // Sets cookies for the firstname and email
+            document.cookie = `${existingCookies}firstname=${firstNameInput}; expires=${expirationDate.toUTCString()}`;
+            document.cookie = `${existingCookies}email=${emailInput}; expires=${expirationDate.toUTCString()}`;
+        }
+
+        // A function that shows cookies
+        function showCookies() {
+            // Creates a paragraph element
+            const paragraph = document.createElement("p");
+
+            // Gets the value of the cookies
+            const cookiesArray = document.cookie.split(';');
+            let firstNameCookie = "";
+            let emailCookie = "";
+
+            for (let i = 0; i < cookiesArray.length; i++) {
+                const cookie = cookiesArray[i];
+                const cookieParts = cookie.split('=');
+                const cookieName = cookieParts[0].trim();
+                const cookieValue = cookieParts[1];
+
+                if (cookieName === "firstname") {
+                    firstNameCookie = cookieValue;
+                }
+
+                if (cookieName === "email") {
+                    emailCookie = cookieValue;
+                }
+            }
+
+            // Sets the paragraph's innerHTML to show the cookies
+            paragraph.innerHTML = `Cookies: First Name - ${firstNameCookie}, Email - ${emailCookie}`;
+
+            // Appends the paragraph to the bottom of the page
+            document.body.appendChild(paragraph);
+        }
+
+        // A function that gets the cookie value by name
+        function getCookie(cookieName) {
+            const name = cookieName + "=";
+            const decodedCookie = decodeURIComponent(document.cookie);
+            const cookiesArray = decodedCookie.split(';');
+
+            for (let i = 0; i <cookiesArray.length; i++) {
+                let cookie = cookiesArray[i];
+                while (cookie.charAt(0) === ' ') {
+                    cookie = cookie.substring(1);
+                }
+                if (cookie.indexOf(name) === 0) {
+                    return cookie.substring(name.length, cookie.length);
+                }
+            }
+            return "";
+        }
+    </script>
+</body>
+</html>
