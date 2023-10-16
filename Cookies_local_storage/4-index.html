@@ -14,7 +14,7 @@
         <!--Email input-->
         <input type="text" id="email" placeholder="Email">
         <!--Log in Button-->
-        <button onclick="setCookies()">Log me in</button>
+        <button onclick="setCookiesAndShowWelcomeMessage()">Log me in</button>
     </div>
 
     <!--Creates a welcome message or a form container-->
@@ -39,20 +39,10 @@
             showWelcomeMessageOrForm();
         }
 
-        // A function that deletes cookies and displays the login form
-        function deleteCookiesAndShowForm() {
-            // Removes the two cookies
-            Cookies.remove('firstname');
-            Cookies.remove('email');
-
-            // Calls the showForm function to display the login form
-            showForm();
-        }
-
         // A function that shows the login form
         function showForm() {
             // Hides the Welcome Message if it exists
-            const formDiv = document.getElementById("login-form");
+            const formDiv = document.getElementById("loginForm");
             const welcomeMessage = document.getElementById("welcome-message")
 
             if (formDiv) {
@@ -62,6 +52,16 @@
             if (welcomeMessage) {
                 welcomeMessage.style.display = "none";
             }
+        }
+
+        // A function that deletes cookies and displays the login form
+        function deleteCookiesAndShowForm() {
+            // Removes the two cookies
+            Cookies.remove('firstname');
+            Cookies.remove('email');
+
+            // Calls the showForm function to display the login form
+            showForm();
         }
 
         // A function that shows the Welcome Message or form
