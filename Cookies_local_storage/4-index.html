@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
-    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/src/js.cookie.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
 </head>
 <body>
     <div id="loginForm" style="display: none;">
@@ -43,14 +43,14 @@
         function showForm() {
             // Hides the Welcome Message if it exists
             const formDiv = document.getElementById("loginForm");
-            const welcomeMessage = document.getElementById("welcome-message")
+            const welcomeContainer = document.getElementById("welcomeContainer")
 
             if (formDiv) {
                 formDiv.style.display = "block";
             }
 
-            if (welcomeMessage) {
-                welcomeMessage.style.display = "none";
+            if (welcomeContainer) {
+                welcomeContainer.style.display = "none";
             }
         }
 
@@ -70,13 +70,13 @@
 
             if (firstNameCookie) {
                 // If user is logged in, this replaces the body content with the welcome message
-                const welcomeContainer = document.getElementById("h1");
+                const welcomeMessage = document.createElement("h1");
                 welcomeMessage.textContent = `Welcome ${firstNameCookie} {logout}`;
                 welcomeMessage.style.fontStyle = "italic";
                 welcomeMessage.style.marginLeft = "10px";
 
                 // This creates a logout link
-                const logoutLink = document.getElementById("a");
+                const logoutLink = document.createElement("a");
                 logoutLink.href = "#";
                 logoutLink.textContent = "(logout)";
                 logoutLink.onclick = deleteCookiesAndShowForm;
@@ -85,18 +85,22 @@
                 welcomeMessage.appendChild(logoutLink);
 
                 // Displays the Welcome Message
-                const formDiv = document.getElementById("login-form");
-                formDiv.style.display = "none";
+                const welcomeContainer = document.getElementById("welcomeContainer");
+                welcomeContainer.style.display = "block";
+                welcomeContainer.innerHTML = "";
+                welcomeContainer.appendChild(welcomeMessage);
 
-                const welcomeDiv = document.getElementById("welcome-message");
-                welcomeDiv.style.display = "block";
-                welcomeDiv.innerHTML = "";
-                welcomeDiv.appendChild(welcomeMessage);
+                // Hide the login form 
+                const formDiv = document.getElementById("loginForm");
+                formDiv.style.display = "none";
             } else {
                 // If the user isn't logged in, call the showForm func to show the login form
                 showForm();
             }
         }
+
+        // Calls the showWelcomeMessageOrForm func to determine whether to display the login or welcome message
+        showWelcomeMessageOrForm();
     </script>
 </body>
 </html>
